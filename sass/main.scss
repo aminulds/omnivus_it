@@ -166,7 +166,6 @@ $accordion-icon-transform:  rotate(-90deg);
         background: rgba(0, 21, 45, 0.9);
     }
 
-
     .intro-right{
 
         &::before{
@@ -275,6 +274,7 @@ $accordion-icon-transform:  rotate(-90deg);
 
 
     .input-group{
+
         ::placeholder{
             color: $white;
             padding-top: 10px;
@@ -344,11 +344,87 @@ $accordion-icon-transform:  rotate(-90deg);
         position: absolute;
         left: 0; right: 0;
         top: 0; bottom: 0;
-        opacity: 0.9;
+        opacity: 0.7;
         background: rgba(13, 110, 253, 1);
     }
 }
 
+// Blog
+.blog{
+    background-color: #002248;
+
+    .blog-title{
+        h6{
+            color: #6a96b6;
+        }
+    }
+
+    .blog-item{
+       
+        .blog-img{
+            opacity: 0.8;
+            transition: transform 2s;
+            &:hover{
+                transform: scale(1.05);
+                position: relative;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    left: 0; right: 0;
+                    top: 0; bottom: 0;
+                    opacity: 0.5;
+                    background: rgba(13, 110, 253, 1);
+                }
+            }   
+        }
+
+        .item-text{
+            bottom: 17vh;
+
+            a{
+                color: $white;
+                line-height: 25px;
+                transition: all 0.8s ease;
+                &:hover{
+                    
+                    color: $primary;
+                    position: relative;
+                }
+            }
+        }
+
+    }
+}
+
+// Footer
+.footer{
+    background-image: url('../images/footer-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        opacity: 0.9;
+        background: rgba(0, 21, 45, 0.9);
+    }
+
+    .footer-mid{
+        a{
+            color: $white;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+
+}
 
 
 
