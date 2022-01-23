@@ -1,7 +1,16 @@
+// Color
 $secondary: #dde9f9;
 $white: #ffffff;
 $info: #7895b4;
 $black: #032149;
+$primary: #0d6efd;
+$danger: #ff5f6f;
+
+// QA
+$accordion-icon-transition: transform .5s ease-in-out;
+$accordion-icon-transform:  rotate(-90deg);
+
+
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -146,14 +155,17 @@ $black: #032149;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 
-    .bg-opacity{
-        background-color: #00152DE6;
-        opacity: 0.9;
-        height: 100%;
-        width: 100%;
+    &:before{
+        content: "";
         position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        opacity: 0.9;
+        background: rgba(0, 21, 45, 0.9);
     }
+
 
     .intro-right{
 
@@ -244,20 +256,23 @@ $black: #032149;
     }
 }
     
-// QA
+// Contact
 .contact{
     background-image: url('../images/contact-bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 
-    .bg-opacity{
-        background-color: #00152DE6;
-        opacity: 0.9;
-        height: 100%;
-        width: 100%;
+    &:before{
+        content: "";
         position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        opacity: 0.9;
+        background: rgba(0, 21, 45, 0.9);
     }
+
 
     .input-group{
         ::placeholder{
@@ -277,4 +292,72 @@ $black: #032149;
     }
 
 }
+
+// QA
+.qa-section{
+    .accordion{
+        .accordion-item{
+            .accordion-button{
+
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .qa-right{
+        .first-img{
+            img{
+                transition: transform .3s;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .second-img{
+
+            img{
+                margin-top: -40%;
+                border: 8px solid $secondary;
+                transition: transform .3s;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+// Get Action
+.get-action{
+    background-image: url('../images/cta-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        opacity: 0.9;
+        background: rgba(13, 110, 253, 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
