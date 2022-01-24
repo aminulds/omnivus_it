@@ -37,6 +37,15 @@ $accordion-icon-transform:  rotate(-90deg);
     }
 }
 
+// Nav
+.navbar{
+    .navbar-toggler{
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
 .navbar-nav{
     a{
         color: $info;
