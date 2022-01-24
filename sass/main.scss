@@ -109,6 +109,36 @@ $accordion-icon-transform:  rotate(-90deg);
     }
 }
 
+// About
+
+.content{
+    position: relative;
+    img{
+        padding: 10px;
+    }
+
+    &:before,
+    &:after {
+    width: 30px;
+    height: 30px;
+    content: '';
+    position: absolute;
+    }
+    &:before {
+    border-top: 10px solid $primary;
+    border-left: 10px solid $primary;
+    top: 0;
+    left: 0;
+    }
+    &:after {
+    border-right: 10px solid $primary;
+    border-bottom: 10px solid $primary;
+    bottom: 0;
+    right: 0;
+    }
+}
+
+
 
 // Work
 .work-section{
@@ -152,6 +182,33 @@ $accordion-icon-transform:  rotate(-90deg);
     }
 
     .intro-right{
+        // Border corner
+        .intro-img{
+            position: relative;
+            img{
+                padding: 10px;
+            }
+        
+            &:before,
+            &:after {
+            width: 30px;
+            height: 30px;
+            content: '';
+            position: absolute;
+            }
+            &:before {
+            border-top: 10px solid $primary;
+            border-left: 10px solid $primary;
+            top: 0;
+            left: 0;
+            }
+            &:after {
+            border-right: 10px solid $primary;
+            border-bottom: 10px solid $primary;
+            bottom: 0;
+            right: 0;
+            }
+        }
 
         .vid-pop-btn{
 
@@ -185,6 +242,10 @@ $accordion-icon-transform:  rotate(-90deg);
                     color: $white;    
                 }
             }
+        }
+        // corner border
+        .intro-img{
+            
         }
     }
 }
